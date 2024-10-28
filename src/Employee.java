@@ -10,7 +10,7 @@ public class Employee extends Person {
     private EmployeeStatus status;
     private Branch worksAt;
 
-    public Employee(String name, String phone, String email, int employeeID, Date dateJoined, String position, double salary, String department, EmployeeStatus status) {
+    public Employee(String name, String phone, String email, int employeeID, Date dateJoined, String position, double salary, String department, EmployeeStatus status, Branch worksAt) {
         super(name, phone, email);
         this.employeeID = employeeID;
         this.dateJoined = dateJoined;
@@ -18,6 +18,7 @@ public class Employee extends Person {
         this.salary = salary;
         this.department = department;
         this.status = status;
+        this.worksAt = worksAt;
     }
 
     public Employee() {
@@ -73,6 +74,14 @@ public class Employee extends Person {
         this.status = status;
     }
 
+    public Branch getWorksAt() {
+        return worksAt;
+    }
+
+    public void setWorksAt(Branch worksAt) {
+        this.worksAt = worksAt;
+    }
+
     // Метод для обновления статуса сотрудника
     public void updateStatus(EmployeeStatus newStatus) {
         this.status = newStatus;
@@ -88,6 +97,7 @@ public class Employee extends Person {
                 "Position: " + position + "\n" +
                 "Salary: " + salary + "\n" +
                 "Department: " + department + "\n" +
-                "Status: " + status;
+                "Status: " + status + "\n" +
+                "Works at:" + worksAt;
     }
 }

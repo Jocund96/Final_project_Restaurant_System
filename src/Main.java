@@ -93,7 +93,7 @@ public class Main {
                     System.out.print("Enter employee department: ");
                     String department = scanner.nextLine();
                     EmployeeStatus status = EmployeeStatus.ACTIVE;
-                    Employee employee = new Employee(name, phone, email, employeeID, dateJoined, position, salary, department, status);
+                    Employee employee = new Employee(name, phone, email, employeeID, dateJoined, position, salary, department, status, branch);
 
                     manager.addEmployee(employee, branch);
                     break;
