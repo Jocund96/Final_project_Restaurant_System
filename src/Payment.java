@@ -43,6 +43,7 @@ public class Payment implements PaymentInt {
 
     @Override
     public String paymentType() {
+
         return "Generic Payment";
     }
 

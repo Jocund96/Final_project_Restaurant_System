@@ -57,5 +57,4 @@ public class Waiter extends Employee implements AccountInt {
         }
     }
 
-    // Другие методы
 }
