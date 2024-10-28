@@ -8,6 +8,7 @@ public class Employee extends Person {
     private double salary;
     private String department;
     private EmployeeStatus status;
+    private Branch worksAt;
 
     public Employee(String name, String phone, String email, int employeeID, Date dateJoined, String position, double salary, String department, EmployeeStatus status) {
         super(name, phone, email);
