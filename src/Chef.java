@@ -8,8 +8,8 @@ public class Chef extends Employee implements AccountInt {
     private boolean loggedIn = false;
     private Account account;
 
-    public Chef(String name, String phone, String email, int employeeID, Date dateJoined, String position, double salary, String department, EmployeeStatus status, Account account) {
-        super(name, phone, email, employeeID, dateJoined, position, salary, department, status);
+    public Chef(String name, String phone, String email, int employeeID, Date dateJoined, String position, double salary, String department, EmployeeStatus status, Account account, Branch worksAt) {
+        super(name, phone, email, employeeID, dateJoined, position, salary, department, status, worksAt);
         this.account = account;
     }
 
