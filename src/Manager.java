@@ -10,6 +10,9 @@ public class Manager extends Employee implements AccountInt {
 
     Order order = new Order();
 
+    public Manager(){
+
+    }
     public Manager(String name, String phone, String email, int employeeID, Date dateJoined, String position, double salary, String department, EmployeeStatus status, Account account, Branch worksAt) {
         super(name, phone, email, employeeID, dateJoined, position, salary, department, status, worksAt);
         this.account = account;

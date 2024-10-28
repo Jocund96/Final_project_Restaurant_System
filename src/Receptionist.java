@@ -4,6 +4,7 @@ public class Receptionist extends Employee implements AccountInt {
     private boolean loggedIn = false;
     private Account account;
 
+    public Receptionist(){}
     public Receptionist(Account account) {
         super();
         this.account = account;

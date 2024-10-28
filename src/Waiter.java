@@ -4,6 +4,9 @@ public class Waiter extends Employee implements AccountInt {
     private boolean loggedIn = false;
     private Account account;
 
+    public Waiter(){
+
+    }
     public Waiter(Account account) {
         this.account = account;
     }

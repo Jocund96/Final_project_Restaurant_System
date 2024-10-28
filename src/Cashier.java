@@ -6,4 +6,7 @@ public class Cashier extends Payment{
         super(paymentID, amount, creationDate);
     }
 
+    public Cashier() {
+        super();
+    }
 }

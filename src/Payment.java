@@ -16,6 +16,10 @@ public class Payment implements PaymentInt {
         this.creationDate = new Date();
     }
 
+    public Payment() {
+
+    }
+
     // Геттеры и сеттеры
     public int getPaymentID() {
         return paymentID;
