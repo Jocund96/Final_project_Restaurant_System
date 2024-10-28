@@ -8,6 +8,7 @@ public class Branch {
     private List<Table> tables;
     private List<Employee> employees;
 
+    public Branch(){}
     public Branch(String name, Address location) {
         this.name = name;
         this.location = location;

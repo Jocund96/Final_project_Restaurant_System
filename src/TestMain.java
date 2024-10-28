@@ -1,3 +1,8 @@
+import enums.AccountStatus;
+import enums.EmployeeStatus;
+
+import java.sql.Time;
+import java.util.Date;
 import java.util.Scanner;
 
 public class TestMain {
@@ -12,6 +17,8 @@ public class TestMain {
         switch (forSwitching){
             case 1:
                 Manager manager = new Manager();
+                forLoggingInManager();
+                System.out.println("You are logged in");
                 break;
             case 2:
                 Cashier cashier = new Cashier();
@@ -30,8 +37,52 @@ public class TestMain {
                 forSwitching();
         }
     }
-    public static void forLoggingIn(){
-        String name;
-
+    public static void forLoggingInManager(){
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.next();
+        int employeeID = scanner.nextInt();
+        String id = scanner.next();
+        String password = scanner.next();
+        Address address = new Address() {
+            @Override
+            public int hashCode() {
+                return super.hashCode();
+            }
+        };
+        AccountStatus accountStatus = AccountStatus.ACTIVE;
+        Account account = new Account(id,password,address,accountStatus);
+        String phone = scanner.next();
+        String email = scanner.next();
+        String position = scanner.next();
+        Date dateJoined = new Date();
+        double salary = scanner.nextDouble();
+        String department = scanner.next();
+        EmployeeStatus employeeStatus = EmployeeStatus.ACTIVE;
+        Branch worksAt = new Branch();
+        Manager manager = new Manager(name,phone,email,employeeID,dateJoined,position,salary,department,employeeStatus,account,worksAt);
+    }
+    public static void forLoggingInCashier(){
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.next();
+        int employeeID = scanner.nextInt();
+        String id = scanner.next();
+        String password = scanner.next();
+        Address address = new Address() {
+            @Override
+            public int hashCode() {
+                return super.hashCode();
+            }
+        };
+        AccountStatus accountStatus = AccountStatus.ACTIVE;
+        Account account = new Account(id,password,address,accountStatus);
+        String phone = scanner.next();
+        String email = scanner.next();
+        String position = scanner.next();
+        Date dateJoined = new Date();
+        double salary = scanner.nextDouble();
+        String department = scanner.next();
+        EmployeeStatus employeeStatus = EmployeeStatus.ACTIVE;
+        Branch worksAt = new Branch();
+        Manager manager = new Manager(name,phone,email,employeeID,dateJoined,position,salary,department,employeeStatus,account,worksAt);
     }
 }
