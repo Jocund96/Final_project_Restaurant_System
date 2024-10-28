@@ -5,7 +5,9 @@ public class Order {
     private int orderId;
     private OrderStatus status;
     private List<Meal> meals;
+    public Order(){
 
+    }
     public Order(int orderId) {
         this.orderId = orderId;
         this.meals = new ArrayList<>();
