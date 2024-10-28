@@ -40,6 +40,7 @@ public class Main {
             System.out.println("15. Chef Login");
             System.out.println("16. Manager Logout");
             System.out.println("17. Chef Logout");
+            System.out.println("==============================================");
 
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
